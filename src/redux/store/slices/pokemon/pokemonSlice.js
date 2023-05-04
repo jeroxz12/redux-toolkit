@@ -14,6 +14,9 @@ export const pokemonSlice = createSlice({
         //     isLoading:true No mutando state
         // }
       }, setPokemons: (state, action) => {
+        state.isLoading = false;
+        state.page = action.payload.page;
+        state.pokemons = action.payload.pokemons
         console.log(action);
       }
     }
